@@ -54,33 +54,34 @@
 ```
 N_m3u8DL-CLI.exe <URL|File|JSON> [OPTIONS]  
 
-    --workDir    Directory      设定程序工作目录
-    --saveName   Filename       设定存储文件名(不包括后缀)
-    --baseUrl    BaseUrl        设定Baseurl
-    --headers    headers        设定请求头，格式 key:value 使用|分割不同的key&value
-    --maxThreads Thread         设定程序的最大线程数(默认为32)
-    --minThreads Thread         设定程序的最小线程数(默认为16)
-    --retryCount Count          设定程序的重试次数(默认为15)
-    --timeOut    Sec            设定程序网络请求的超时时间(单位为秒，默认为10秒)
-    --muxSetJson File           使用外部json文件定义混流选项
-    --useKeyFile File           使用外部16字节文件定义AES-128解密KEY
-    --useKeyBase64 Base64String 使用Base64字符串定义AES-128解密KEY
-    --useKeyIV     HEXString    使用HEX字符串定义AES-128解密IV
-    --downloadRange Range       仅下载视频的一部分分片或长度
-    --liveRecDur HH:MM:SS       直播录制时，达到此长度自动退出软件
-    --stopSpeed  Number         当速度低于此值时，重试(单位为KB/s)
-    --maxSpeed   Number         设置下载速度上限(单位为KB/s)
-    --proxyAddress http://xx    设置HTTP代理, 如 http://127.0.0.1:8080
-                   socks5://xx  设置SOCKS5代理, 如 socks5://127.0.0.1:8080
-    --enableDelAfterDone        开启下载后删除临时文件夹的功能
-    --enableMuxFastStart        开启混流mp4的FastStart特性
-    --enableBinaryMerge         开启二进制合并分片
-    --enableParseOnly           开启仅解析模式(程序只进行到meta.json)
-    --enableAudioOnly           合并时仅封装音频轨道
-    --disableDateInfo           关闭混流中的日期写入
-    --noMerge                   禁用自动合并
-    --noProxy                   不自动使用系统代理
-    --disableIntegrityCheck     不检测分片数量是否完整
+    --workDir    Directory      Set the program working directory
+    --saveName   Filename       Set the storage file name (excluding suffix)
+    --baseUrl    BaseUrl        Set Baseurl
+    --headers    headers        Set the request header, format key:value Use | to separate different key&value
+    --maxThreads Thread         Set the maximum number of threads for the program (default is 32)
+    --minThreads Thread         Set the minimum number of threads for the program (default is 16)
+    --retryCount Count          Set the number of retries for the program (default is 15)
+    --timeOut    Sec            Set the timeout time for the program network request (in seconds, the default is 10 seconds)
+    --muxSetJson File           Define muxing options using an external json file
+    --useKeyFile File           Define the AES-128 decryption KEY using an external 16-byte file
+    --useKeyBase64 Base64String Define AES-128 decryption KEY using Base64 string
+    --useKeyIV     HEXString    Define AES-128 decryption IV with HEX string
+    --downloadRange Range       Download only a portion or length of a video
+    --liveRecDur HH:MM:SS       During live recording, the software will automatically exit when this length is reached
+    --stopSpeed  Number         When the speed is lower than this value, retry (in KB/s)
+    --maxSpeed   Number         Set the download speed upper limit (in KB/s)
+    --proxyAddress http://xx    Set HTTP proxy, such as http://127.0.0.1:8080
+                   socks5://xx set SOCKS5 proxy, such as socks5://127.0.0.1:8080
+    --enableDelAfterDone        Enable the function of deleting temporary folders after downloading
+    --enableMuxFastStart        Enable the FastStart feature of mixed-stream mp4
+    --enableBinaryMerge         Enable binary merge sharding
+    --enableParseOnly           Turn on parse-only mode (the program only goes to meta.json)
+    --enableAudioOnly           Wrap only audio tracks when merging
+    --disableDateInfo           Turn off date writing in mux
+    --noMerge                   Disable automatic merging
+    --noProxy                   Do not use system proxy automatically
+    --disableIntegrityCheck     Does not check whether the number of shards is complete
+
 ```
 
 # 用户文档
